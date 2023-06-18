@@ -15,7 +15,7 @@
     "jsx": "react-jsx",
     "paths": {
       "@/model/*":[
-        "./src/model/"
+        "./src/model/*"
       ],
       "@/shared/*": [
         "./src/shared/*"
