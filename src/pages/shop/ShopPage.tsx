@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { pb } from '../../pocketbase';
 import { ProductCard } from './components/ProductCard';
 import { ServerError, Spinner } from '@/shared/';
+import { useCart, useCartPanel } from '@/services/cart';
 
 
 export function ShopPage() {
@@ -10,25 +11,25 @@ export function ShopPage() {
   const [pending, setPending] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
 
+  const openCartPanel = useCartPanel(state => state.openOverlay)
+  const addToCart = useCart(state => state.addToCart)
+
   useEffect(() => {
     setPending(true)
     setError(false)
     pb.collection('products').getList<Product>()
       .then(res => {
         setProducts(res.items)
-        setPending(false)
+        setError(false)
       })
-      .catch(() => {
-        setError(true)
-      })
-      .finally(() => {
-        setPending(false)
-      })
+      .catch(() => setError(true))
+      .finally(() => setPending(false))
   }, [])
 
-  function addToCart(product: Partial<Product>) {
-    console.log(product)
-  }
+  // function addToCart(product: Partial<Product>) {
+  //   console.log(product)
+  //   openCartPanel()
+  // }
 
   return (
     <div>
@@ -44,7 +45,10 @@ export function ShopPage() {
             <ProductCard
             key={p.id} 
             product={p}
-            onAddToCart={addToCart}/>
+            onAddToCart={() => {
+              openCartPanel();
+              addToCart(p)
+            }}/>
           )
         })
       }
