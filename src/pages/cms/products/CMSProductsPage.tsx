@@ -1,10 +1,11 @@
 import { useProductsService } from "@/services/products";
 import { useEffect } from "react";
+import { ServerError } from "../../../shared/";
  
 export function CMSProductsPage() {
   const { state, actions } = useProductsService()
 
-  useEffect(() => {
+  useEffect(() => { 
     actions.getProducts()
   }, [])
  
@@ -17,8 +18,7 @@ export function CMSProductsPage() {
       <hr className="my-8"/>
  
       {state.pending && <div>loading...</div>}
-      {state.error && <div>{state.error}</div>}
- 
+      {state.error && <ServerError message={state.error}/>}
  
       <pre>{JSON.stringify(state, null, 2)}</pre>
     </div>
