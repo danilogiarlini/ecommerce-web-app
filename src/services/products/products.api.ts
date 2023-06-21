@@ -2,7 +2,7 @@ import { Product } from "@/model/product";
 import { pb } from "../../pocketbase";
 
 export function get() {
-    return pb.collection('productsx').getList<Product>()
+    return pb.collection('products').getList<Product>()
 }
 
 export function remove(id: string) {
