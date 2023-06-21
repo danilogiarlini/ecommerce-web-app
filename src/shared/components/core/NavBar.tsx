@@ -7,8 +7,9 @@ import {
   useCart,
   useCartPanel,
 } from "@/services/cart";
-import { selectAuthIsLogged, useAuth } from "@/services/auth";
-import { IfLogged } from "../auth/ifLogged";
+import { useAuth } from "@/services/auth";
+import { IfLogged } from "../auth/IfLogged";
+
 
 const isActive = (obj: { isActive: boolean }) =>
   obj.isActive ? "text-xl text-sky-400 font-bold" : "text-xl text-white";
