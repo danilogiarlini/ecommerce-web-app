@@ -2,6 +2,8 @@ import { selectCartList, selectTotalCartCost, useCart } from "@/services/cart";
 import React, { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { OrderForm } from "@/model/order-form";
+import { useOrdersService } from "@/services/orders";
+import { ClientResponseError } from "pocketbase";
 
 export const EMAIL_REGEX =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -13,6 +15,8 @@ export function useCheckout() {
 
   const totalCartCost = useCart(selectTotalCartCost);
   const clearCart = useCart((state) => state.clearCart);
+
+  const { state, addOrder } = useOrdersService()
   
   const order = useCart(selectCartList);
 
@@ -31,10 +35,15 @@ export function useCheckout() {
       status: "pending",
       total: totalCartCost,
     };
-    console.log(orderInfo);
+    
+    addOrder(orderInfo)
+      .then((res) => {
+        if (!(res instanceof ClientResponseError)) {
+          clearCart();
+          navigate('/thankyou');
+        }
+      })
 
-    clearCart();
-    navigate("/thankyou");
   }
 
   const isNameValid = user.name.length;
@@ -54,5 +63,6 @@ export function useCheckout() {
     user,
     dirty,
     totalCartCost,
+    error: state.error
   };
 }
