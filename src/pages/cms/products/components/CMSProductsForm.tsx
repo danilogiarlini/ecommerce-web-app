@@ -2,6 +2,7 @@ import { Product } from "@/model/product";
 import clsx from "clsx";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 
+declare var cloudinary: any
 export interface CMSProductsFormProps {
   activeItem: Partial<Product> | null;
   onClose: () => void;
@@ -44,6 +45,7 @@ export function CMSProductsForm(props: CMSProductsFormProps) {
       props.onAdd(formData);
     }
   }
+
 
   const isNameValid = formData.name?.length;
   const isCostValid = formData.cost! > 0;
@@ -104,6 +106,10 @@ export function CMSProductsForm(props: CMSProductsFormProps) {
             name="description"
             onChange={changeHandler}
           ></textarea>
+
+          <button className="btn primary" type="button">
+            UPLOAD IMAGE
+          </button>
         </div>
       </form>
     </div>
