@@ -44,7 +44,3 @@ migrate((db) => {
 
   return dao.saveCollection(collection)
 })
-
-
-
-
