@@ -37,7 +37,6 @@ export function ShopPage() {
         })
       }
       </div>
-
     </div>
   )
 }

@@ -1,7 +1,7 @@
 export function useCloudinary() {
 
     function openWidget(): Promise<{ img: string, tmb: string }> {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             const uploadWidget = window.cloudinary.openUploadWidget({
 
                 cloudName: 'dge1n5ezz',
