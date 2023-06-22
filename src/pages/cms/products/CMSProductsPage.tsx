@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useProductsService } from '@/services/products';
 import { ServerError, Spinner } from '@/shared/';
 import { CMSProductsList } from './components/CMSProductsList';
+import { CMSProductsForm } from './components/CMSProductsForm';
 
 export function CMSProductsPage() {
   const { state, actions } = useProductsService();
@@ -16,6 +17,10 @@ export function CMSProductsPage() {
 
       {state.pending && <Spinner />}
       {state.error && <ServerError message={state.error} />}
+
+      <CMSProductsForm
+        activeItem={state.activeItem}
+        onClose={actions.resetActiveItem} />
 
       <CMSProductsList
         items={state.products}
