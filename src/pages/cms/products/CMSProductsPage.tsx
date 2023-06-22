@@ -20,7 +20,9 @@ export function CMSProductsPage() {
 
       <CMSProductsForm
         activeItem={state.activeItem}
-        onClose={actions.resetActiveItem} />
+        onClose={actions.resetActiveItem}
+        onAdd={actions.addProduct}
+        onEdit={actions.editProduct} />
 
       <CMSProductsList
         items={state.products}
@@ -29,7 +31,10 @@ export function CMSProductsPage() {
         onDeleteItem={actions.deleteProduct}
       />
 
-      <pre>{JSON.stringify(state.activeItem, null, 2)}</pre>
+      <button className="btn primary" onClick={() => actions.setActiveItem({})}>
+        ADD NEW
+      </button>
+
     </div>
   )
 }
