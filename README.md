@@ -28,8 +28,6 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push your changes to your fork.
 5. Submit a pull request to the main repository.
 
-Please ensure that your code adheres to the project's coding standards and includes appropriate documentation.
-
 ## Contact
 
-If you have any questions or suggestions, please feel free to reach out to us at [danilogiarlini@gmail.com](mailto:danilogiarlini@egmail.com).
+If you have any questions or suggestions, please feel free to reach out to me at [danilogiarlini@gmail.com](mailto:danilogiarlini@gmail.com).
