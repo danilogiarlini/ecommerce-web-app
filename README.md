@@ -9,12 +9,11 @@ This web application is designed to provide a seamless online shopping experienc
 - Shopping cart: Users can add products to their shopping cart, update quantities, and remove items.
 - Checkout process: Users can proceed to checkout, enter shipping and payment details, and complete their orders.
 - Order tracking: Users can track the status of their orders and view order history.
-- Seller dashboard: Sellers can manage their products, inventory, and orders.
 - Admin dashboard: Administrators can manage the overall system, including user management, product management, and order management.
 
 ## Technologies Used
 
-- Front-end:Typescrip, React.js, Tailwind
+- Front-end: Typescrip, React.js, Tailwind
 - Back-end: Pocketbase
 
 - Additional libraries and frameworks: Bootstrap, Redux, Axios, etc.
@@ -34,5 +33,3 @@ Please ensure that your code adheres to the project's coding standards and inclu
 ## Contact
 
 If you have any questions or suggestions, please feel free to reach out to us at [danilogiarlini@egmail.com](mailto:danilogiarlini@egmail.com).
-
-Thank you for using our Ecommerce Web Application! We hope you have a great shopping experience!
