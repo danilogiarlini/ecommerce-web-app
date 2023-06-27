@@ -1,8 +1,6 @@
-# Ecommerce Web Application
+# Ecommerce Web Application 🛍️
 
-![Ecommerce Web Application](https://example.com/images/app_screenshot.png)
-
-Welcome to the Ecommerce Web Application! This web application is designed to provide a seamless online shopping experience for users. It offers a range of features and functionalities to facilitate the buying and selling of products.
+This web application is designed to provide a seamless online shopping experience for users. It offers a range of features and functionalities to facilitate the buying and selling of products.
 
 ## Features
 
@@ -16,48 +14,10 @@ Welcome to the Ecommerce Web Application! This web application is designed to pr
 
 ## Technologies Used
 
-- Front-end: HTML, CSS, JavaScript, React.js
-- Back-end: Node.js, Express.js, MongoDB
-- Payment gateway integration: Stripe, PayPal, etc. (optional)
+- Front-end:Typescrip, React.js, Tailwind
+- Back-end: Pocketbase
+
 - Additional libraries and frameworks: Bootstrap, Redux, Axios, etc.
-
-## Installation
-
-1. Clone the repository:
-
-   ```shell
-   git clone https://github.com/your-username/ecommerce-webapp.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```shell
-   cd ecommerce-webapp
-   ```
-
-3. Install the dependencies:
-
-   ```shell
-   npm install
-   ```
-
-4. Set up the environment variables:
-   - Create a `.env` file in the root directory of the project.
-   - Specify the required environment variables in the following format:
-
-     ```dotenv
-     PORT=3000
-     MONGODB_URI=mongodb://localhost/ecommerce
-     SECRET_KEY=your-secret-key
-     ```
-
-5. Start the development server:
-
-   ```shell
-   npm start
-   ```
-
-6. Open your browser and visit `http://localhost:3000` to access the application.
 
 ## Contributing
 
@@ -71,12 +31,8 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 Please ensure that your code adheres to the project's coding standards and includes appropriate documentation.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Contact
 
-If you have any questions or suggestions, please feel free to reach out to us at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or suggestions, please feel free to reach out to us at [danilogiarlini@egmail.com](mailto:danilogiarlini@egmail.com).
 
 Thank you for using our Ecommerce Web Application! We hope you have a great shopping experience!
