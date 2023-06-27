@@ -32,4 +32,4 @@ Please ensure that your code adheres to the project's coding standards and inclu
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to reach out to us at [danilogiarlini@egmail.com](mailto:danilogiarlini@egmail.com).
+If you have any questions or suggestions, please feel free to reach out to us at [danilogiarlini@gmail.com](mailto:danilogiarlini@egmail.com).
